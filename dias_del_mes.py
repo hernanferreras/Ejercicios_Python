@@ -24,8 +24,7 @@ def days_in_month(year, month):
     elif month in meses_31:
         return 31
     else:
-        x = is_year_leap(year)
-        if x == True:
+        if is_year_leap(year) == True:
             return 29
         else:
             return 28
