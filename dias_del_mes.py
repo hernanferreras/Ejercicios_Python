@@ -17,11 +17,12 @@ def is_year_leap(year):
 def days_in_month(year, month):
     #
     # Escribe tu código nuevo aquí.
-    dias_meses = [29, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
-        return 31
-    elif month == 4 or month == 6 or month == 9 or month == 11:
+    meses_30 = [4, 6, 9, 11]
+    meses_31 = [1, 3, 5, 7, 8, 10, 12]
+    if month in meses_30:
         return 30
+    elif month in meses_31:
+        return 31
     else:
         x = is_year_leap(year)
         if x == True:
