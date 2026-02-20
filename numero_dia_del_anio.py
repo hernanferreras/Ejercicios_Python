@@ -32,10 +32,23 @@ def days_in_month(year, month):
 def day_of_year(year, month, day):
     #
     # Escribe tu código nuevo aquí.
-    if year < 1582 or month < 1 or month > 12 or day > 31:
+    if year < 1582 or month < 1 or month > 12:
+        return None
+    elif day > days_in_month(year, month):
         return None
     else:
-        while 
+        if month == 1:
+            return day
+        else:
+            count = 31
+            count_month = 2
+            while count_month <= month:
+                if count_month < month:
+                    count += days_in_month(year, month)
+                else:
+                    count += day
+                count_month += 1
+    return count
     #
 
 print(day_of_year(2000, 12, 31))
