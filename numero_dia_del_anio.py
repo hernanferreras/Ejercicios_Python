@@ -44,7 +44,7 @@ def day_of_year(year, month, day):
             count_month = 2
             while count_month <= month:
                 if count_month < month:
-                    count += days_in_month(year, month)
+                    count += days_in_month(year, count_month)
                 else:
                     count += day
                 count_month += 1
