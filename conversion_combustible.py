@@ -23,6 +23,7 @@ Salida esperada:
 def liters_100km_to_miles_gallon(liters):
     #
     # Escribe tu código aquí.
+    return ((62.13711922373339*3.785411784)/liters)
     #
 
 def miles_gallon_to_liters_100km(miles):
