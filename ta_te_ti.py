@@ -154,9 +154,9 @@ line_2 = "|       |       |       |"
 
 #Armado de tablero
 for i in range(len(board)):
-    for j in range(len(board[i])):
         print(line_1)
         print(line_2)
-        print("|  ",board[i][j],"  |  ",board[j],"  |  ",board[i][j],"  |")
-        print(line_2)
+        for j in range(len(board[i])):
+            print("|  ",board[i][j],"  ",end="")
+        print("|\n",line_2)
 print(line_1)
