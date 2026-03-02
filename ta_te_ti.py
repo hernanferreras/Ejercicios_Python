@@ -141,8 +141,7 @@ El siguiente ejemplo muestra como utilizarla (El programa imprime 10 números al
 Nota: la instrucción from-import provee acceso a la función randrange definida en un módulo externo de Python denominado random.
 
 from random import randrange
-'''
-
  
 for i in range(10):
     print(randrange(8))
+'''
