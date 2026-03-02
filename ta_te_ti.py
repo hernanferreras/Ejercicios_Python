@@ -151,8 +151,9 @@ def jugada():
     a = int(input("Ingresa tu movimiento:"))
     return a
 
-board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
-
+board = [["1", "2", "3"], ["4", "X", "6"], ["7", "8", "9"]]
+posiciones_ocupadas = [5,]
+juego = True
 line_1 = "+-------"*3+"+"
 line_2 = "|       "*3+"|" 
 
@@ -164,3 +165,6 @@ for i in range(len(board)):
             print("|  ",board[i][j],"  ",end="")
         print("|\n"+line_2)
 print(line_1)
+
+#while juego = True:
+    
