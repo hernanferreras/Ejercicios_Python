@@ -149,8 +149,8 @@ from random import randrange
 
 board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
 
-line_1 = "+-------+-------+-------+"
-line_2 = "|       |       |       |"
+line_1 = "+-------"*3+"+"
+line_2 = "|       "*3+"|" 
 
 #Armado de tablero
 for i in range(len(board)):
@@ -158,5 +158,5 @@ for i in range(len(board)):
         print(line_2)
         for j in range(len(board[i])):
             print("|  ",board[i][j],"  ",end="")
-        print("|\n",line_2)
+        print("|\n"+line_2)
 print(line_1)
