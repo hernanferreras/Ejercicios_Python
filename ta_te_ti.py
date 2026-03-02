@@ -145,3 +145,18 @@ from random import randrange
 for i in range(10):
     print(randrange(8))
 '''
+from random import randrange
+
+board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
+
+line_1 = "+-------+-------+-------+"
+line_2 = "|       |       |       |"
+
+#Armado de tablero
+for i in range(len(board)):
+    for j in range(len(board[i])):
+        print(line_1)
+        print(line_2)
+        print("|  ",board[i][j],"  |  ",board[j],"  |  ",board[i][j],"  |")
+        print(line_2)
+print(line_1)
