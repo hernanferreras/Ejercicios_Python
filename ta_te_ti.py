@@ -147,6 +147,10 @@ for i in range(10):
 '''
 from random import randrange
 
+def jugada():
+    a = int(input("Ingresa tu movimiento:"))
+    return a
+
 board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
 
 line_1 = "+-------"*3+"+"
