@@ -173,7 +173,34 @@ def make_list_of_free_fields(board):
 # acerca de su movimiento, verifica la entrada y actualiza el tablero
 # acorde a la decisión del usuario.
 def enter_move(board):
+    dicc_celdas = {1:(0,0), 2:(0,1), 3:(0,2), 4:(1,0), 5:(1,1), 6:(1,2), 7:(2,0), 8:(2,1), 9:(2,2)}
+    celdas_ocupadas = make_list_of_free_fields(board)
+    jugada = int(input("Ingresa tu movimiento: "))
     
+
+
+def jugada():
+    a = int(input("Ingresa tu movimiento:"))
+    return a
+
+board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
+posiciones_ocupadas = [5,]
+juego = True
+contador_jugada = 1
+#line_1 = "+-------"*3+"+"
+#line_2 = "|       "*3+"|" 
+
+display_board(board)
+
+
+#def victory_for(board, sign):
+    # La función analiza el estatus del tablero para verificar si 
+    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
+
+
+#def draw_move(board):
+    # La función dibuja el movimiento de la máquina y actualiza el tablero.
+
 
 def jugada():
     a = int(input("Ingresa tu movimiento:"))
