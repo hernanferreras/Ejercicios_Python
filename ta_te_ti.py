@@ -159,7 +159,22 @@ def display_board(board):
         print("|\n"+line_2)
     print(line_1)
     
+def make_list_of_free_fields(board):
+    # La función examina el tablero y construye una lista de todos los cuadros vacíos.
+    # La lista esta compuesta por tuplas, cada tupla es un par de números que indican la fila y columna
+    empty_spaces = []
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            if board[i][j]!= "X" and board[i][j]!= "O":
+                empty_spaces.append((i,j))
+    return empty_spaces
+
+# La función acepta el estado actual del tablero y pregunta al usuario
+# acerca de su movimiento, verifica la entrada y actualiza el tablero
+# acorde a la decisión del usuario.
+def enter_move(board):
     
+
 def jugada():
     a = int(input("Ingresa tu movimiento:"))
     return a
@@ -167,9 +182,21 @@ def jugada():
 board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
 posiciones_ocupadas = [5,]
 juego = True
+contador_jugada = 1
 #line_1 = "+-------"*3+"+"
 #line_2 = "|       "*3+"|" 
 
 display_board(board)
+
+
+#def victory_for(board, sign):
+    # La función analiza el estatus del tablero para verificar si 
+    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
+
+
+#def draw_move(board):
+    # La función dibuja el movimiento de la máquina y actualiza el tablero.
+
+
 
     
