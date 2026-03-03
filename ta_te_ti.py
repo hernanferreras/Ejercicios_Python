@@ -147,24 +147,29 @@ for i in range(10):
 '''
 from random import randrange
 
-def jugada():
-    a = int(input("Ingresa tu movimiento:"))
-    return a
-
-board = [["1", "2", "3"], ["4", "X", "6"], ["7", "8", "9"]]
-posiciones_ocupadas = [5,]
-juego = True
-line_1 = "+-------"*3+"+"
-line_2 = "|       "*3+"|" 
-
-#Armado de tablero
-for i in range(len(board)):
+#Funcion que muestra el estado actual del tablero
+def display_board(board):
+    line_1 = "+-------"*3+"+"   
+    line_2 = "|       "*3+"|" 
+    for i in range(len(board)):
         print(line_1)
         print(line_2)
         for j in range(len(board[i])):
             print("|  ",board[i][j],"  ",end="")
         print("|\n"+line_2)
-print(line_1)
+    print(line_1)
+    
+    
+def jugada():
+    a = int(input("Ingresa tu movimiento:"))
+    return a
 
-#while juego = True:
+board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
+posiciones_ocupadas = [5,]
+juego = True
+#line_1 = "+-------"*3+"+"
+#line_2 = "|       "*3+"|" 
+
+display_board(board)
+
     
