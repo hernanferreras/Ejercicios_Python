@@ -158,7 +158,7 @@ def display_board(board):
             print("|  ",board[i][j],"  ",end="")
         print("|\n"+line_2)
     print(line_1)
-    
+
 def make_list_of_free_fields(board):
     # La función examina el tablero y construye una lista de todos los cuadros vacíos.
     # La lista esta compuesta por tuplas, cada tupla es un par de números que indican la fila y columna
@@ -172,58 +172,44 @@ def make_list_of_free_fields(board):
 # La función acepta el estado actual del tablero y pregunta al usuario
 # acerca de su movimiento, verifica la entrada y actualiza el tablero
 # acorde a la decisión del usuario.
-def enter_move(board):
+def enter_move(a):
     dicc_celdas = {1:(0,0), 2:(0,1), 3:(0,2), 4:(1,0), 5:(1,1), 6:(1,2), 7:(2,0), 8:(2,1), 9:(2,2)}
-    celdas_ocupadas = make_list_of_free_fields(board)
+    celdas_ocupadas = make_list_of_free_fields(a)
     jugada = int(input("Ingresa tu movimiento: "))
-    
+    if jugada in dicc_celdas.keys():
+        if dicc_celdas.keys() not in celdas_ocupadas:
+            i,j = dicc_celdas[jugada][0], dicc_celdas[jugada][1]
+            a[i][j] = "O"
+        else:
+            print("Posicion ocupada, ingrese un nuevo movimiento: ")
+            enter_move(a)
+    else:
+        print("El movimiento ingresado no es valido, ingrese un movimiento valido: ")
+        enter_move(a)
 
-
-def jugada():
-    a = int(input("Ingresa tu movimiento:"))
-    return a
 
 board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
-posiciones_ocupadas = [5,]
-juego = True
-contador_jugada = 1
-#line_1 = "+-------"*3+"+"
-#line_2 = "|       "*3+"|" 
+print(board)
+contador = 1
+fin_juego = False
+while contador < 10 or fin_juego != False:
+    enter_move(board)
+    display_board(board)
+    contador += 1
+    if contador >= 5:
+        print("Empieza a controlar si hay ganador")
+   
+#def victory_for(board, sign):
+    # La función analiza el estatus del tablero para verificar si 
+    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
 
-display_board(board)
-
+#def draw_move(board):
+    # La función dibuja el movimiento de la máquina y actualiza el tablero.
 
 #def victory_for(board, sign):
     # La función analiza el estatus del tablero para verificar si 
     # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
 
-
 #def draw_move(board):
     # La función dibuja el movimiento de la máquina y actualiza el tablero.
 
-
-def jugada():
-    a = int(input("Ingresa tu movimiento:"))
-    return a
-
-board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
-posiciones_ocupadas = [5,]
-juego = True
-contador_jugada = 1
-#line_1 = "+-------"*3+"+"
-#line_2 = "|       "*3+"|" 
-
-display_board(board)
-
-
-#def victory_for(board, sign):
-    # La función analiza el estatus del tablero para verificar si 
-    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
-
-
-#def draw_move(board):
-    # La función dibuja el movimiento de la máquina y actualiza el tablero.
-
-
-
-    
