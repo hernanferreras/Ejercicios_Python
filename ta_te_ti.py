@@ -145,7 +145,10 @@ from random import randrange
 for i in range(10):
     print(randrange(8))
 '''
+#IMPORTACION DE LIBRERIAS
 from random import randrange
+
+#FUNCIONES
 
 #Funcion que muestra el estado actual del tablero
 def display_board(board):
@@ -169,6 +172,18 @@ def make_list_of_free_fields(board):
                 empty_spaces.append((i,j))
     return empty_spaces
 
+# La función dibuja el movimiento de la máquina y actualiza el tablero.
+def draw_move(z):
+    dicc_celdas = {1:(0,0), 2:(0,1), 3:(0,2), 4:(1,0), 5:(1,1), 6:(1,2), 7:(2,0), 8:(2,1), 9:(2,2)}
+    celdas_libres = make_list_of_free_fields(z)
+    jugador_2 = list(dicc_celdas[randrange(9)+1])
+    if jugador_2 in celdas_libres:
+        m, n = jugador_2[m], jugador_2[n]
+        z[m][n] = "X"
+    else:
+        draw_move(z)
+    return z
+ 
 # La función acepta el estado actual del tablero y pregunta al usuario
 # acerca de su movimiento, verifica la entrada y actualiza el tablero
 # acorde a la decisión del usuario.
@@ -189,6 +204,27 @@ def enter_move(a):
         enter_move(a)
     return a
 
+def victory_for(board, sign):
+    # La función analiza el estatus del tablero para verificar si 
+    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
+    win = False
+    for i in range(len(board)):
+        if board[i][0] == sing and board[i][1] == sign and board[i][2] == sign:
+            win = True
+    for j in range(len(board)):
+        if board[0][j] == sing and board[1][j] == sign and board[2][j] == sign:
+            win = True
+    for n in range(2):
+        board[n][n] == sing and board[n][n] == sign and board[n][n] == sign:
+            win = True
+    if sign == "X":
+        print("Ha ganado la computadora")
+        break
+    else:
+        print("Ha ganado el Humano")
+        break
+
+# CODIGO DEL PROGRAMA
 
 board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
 print(board)
