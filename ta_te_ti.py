@@ -215,3 +215,18 @@ while contador < 10 or fin_juego != False:
 #def draw_move(board):
     # La función dibuja el movimiento de la máquina y actualiza el tablero.
 
+   
+#def victory_for(board, sign):
+    # La función analiza el estatus del tablero para verificar si 
+    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
+
+#def draw_move(board):
+    # La función dibuja el movimiento de la máquina y actualiza el tablero.
+
+#def victory_for(board, sign):
+    # La función analiza el estatus del tablero para verificar si 
+    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
+
+#def draw_move(board):
+    # La función dibuja el movimiento de la máquina y actualiza el tablero.
+
