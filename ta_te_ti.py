@@ -178,7 +178,7 @@ def enter_move(a):
     print(celdas_ocupadas)
     jugador_1 = int(input("Ingresa tu movimiento: "))
     if jugador_1 in dicc_celdas.keys():
-        if tuple(dicc_celdas[jugador_1]) not in celdas_ocupadas:
+        if tuple(dicc_celdas[jugador_1]) in celdas_ocupadas:
             i,j = dicc_celdas[jugador_1][0], dicc_celdas[jugador_1][1]
             a[i][j] = "O"
         else:
