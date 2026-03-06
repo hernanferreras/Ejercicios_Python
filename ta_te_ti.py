@@ -175,10 +175,11 @@ def make_list_of_free_fields(board):
 def enter_move(a):
     dicc_celdas = {1:(0,0), 2:(0,1), 3:(0,2), 4:(1,0), 5:(1,1), 6:(1,2), 7:(2,0), 8:(2,1), 9:(2,2)}
     celdas_ocupadas = make_list_of_free_fields(a)
-    jugada = int(input("Ingresa tu movimiento: "))
-    if jugada in dicc_celdas.keys():
-        if dicc_celdas.keys() not in celdas_ocupadas:
-            i,j = dicc_celdas[jugada][0], dicc_celdas[jugada][1]
+    print(celdas_ocupadas)
+    jugador_1 = int(input("Ingresa tu movimiento: "))
+    if jugador_1 in dicc_celdas.keys():
+        if tuple(dicc_celdas[jugador_1]) not in celdas_ocupadas:
+            i,j = dicc_celdas[jugador_1][0], dicc_celdas[jugador_1][1]
             a[i][j] = "O"
         else:
             print("Posicion ocupada, ingrese un nuevo movimiento: ")
@@ -186,6 +187,7 @@ def enter_move(a):
     else:
         print("El movimiento ingresado no es valido, ingrese un movimiento valido: ")
         enter_move(a)
+    return a
 
 
 board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
