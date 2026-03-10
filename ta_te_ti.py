@@ -209,20 +209,19 @@ def victory_for(board, sign):
     # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
     win = False
     for i in range(len(board)):
-        if board[i][0] == sing and board[i][1] == sign and board[i][2] == sign:
+        if board[i][0] == sign and board[i][1] == sign and board[i][2] == sign:
             win = True
     for j in range(len(board)):
-        if board[0][j] == sing and board[1][j] == sign and board[2][j] == sign:
+        if board[0][j] == sign and board[1][j] == sign and board[2][j] == sign:
             win = True
-    for n in range(2):
-        board[n][n] == sing and board[n][n] == sign and board[n][n] == sign:
+    for n in range(1):
+        if board[n][n] == sign and board[n+1][n+1] == sign and board[n+2][n+2] == sign:
             win = True
     if sign == "X":
         print("Ha ganado la computadora")
-        break
     else:
         print("Ha ganado el Humano")
-        break
+
 
 # CODIGO DEL PROGRAMA
 
@@ -231,38 +230,8 @@ print(board)
 contador = 1
 fin_juego = False
 while contador < 10 or fin_juego != False:
-    enter_move(board)
+    board = enter_move(board)
     display_board(board)
     contador += 1
     if contador >= 5:
         print("Empieza a controlar si hay ganador")
-   
-#def victory_for(board, sign):
-    # La función analiza el estatus del tablero para verificar si 
-    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
-
-#def draw_move(board):
-    # La función dibuja el movimiento de la máquina y actualiza el tablero.
-
-#def victory_for(board, sign):
-    # La función analiza el estatus del tablero para verificar si 
-    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
-
-#def draw_move(board):
-    # La función dibuja el movimiento de la máquina y actualiza el tablero.
-
-   
-#def victory_for(board, sign):
-    # La función analiza el estatus del tablero para verificar si 
-    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
-
-#def draw_move(board):
-    # La función dibuja el movimiento de la máquina y actualiza el tablero.
-
-#def victory_for(board, sign):
-    # La función analiza el estatus del tablero para verificar si 
-    # el jugador que utiliza las 'O's o las 'X's ha ganado el juego.
-
-#def draw_move(board):
-    # La función dibuja el movimiento de la máquina y actualiza el tablero.
-
