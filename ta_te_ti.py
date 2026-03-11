@@ -215,7 +215,8 @@ def victory_for(board, sign):
         if board[0][j] == sign and board[1][j] == sign and board[2][j] == sign:
             win = True
     n = 0
-    if board[n][n] == sign and board[n+1][n+1] == sign and board[n+2][n+2] == sign:
+    if (board[n][n] == sign and board[n+1][n+1] == sign and board[n+2][n+2] == sign) or \
+       (board[n+2][n] == sign and board[n+1][n+1] == sign and board[n][n+2] == sign):
         win = True
     if sign == "X" and win == True:
         print("*** Ha ganado la Computadora ***")
@@ -226,13 +227,11 @@ def victory_for(board, sign):
     else:
         return False
         
-    
-
 board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
 display_board(board)
 contador = 0
 fin_juego = False
-while contador < 2 or fin_juego == False:
+while contador < 2:
     board = enter_move(board)
     contador += 1
     board = draw_move(board)
@@ -240,10 +239,10 @@ while contador < 2 or fin_juego == False:
     while contador <= 3 or fin_juego == False:
         board = enter_move(board)
         fin_juego = victory_for(board, "O")
-        contador += 1
-        board = draw_move(board)
         if fin_juego == True:
             break
+        contador += 1
+        board = draw_move(board)
         fin_juego = victory_for(board, "X")
         if fin_juego == True:
             break
@@ -252,4 +251,4 @@ display_board(board)
 if fin_juego == True:
     print("Fin del juego")
 else:
-    print("Empate")
+    print("Empate")     
