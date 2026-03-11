@@ -227,6 +227,8 @@ def victory_for(board, sign):
     else:
         return False
         
+    
+
 board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
 display_board(board)
 contador = 0
@@ -236,7 +238,7 @@ while contador < 2:
     contador += 1
     board = draw_move(board)
     display_board(board)
-    while contador <= 3 or fin_juego == False:
+    while contador <4:
         board = enter_move(board)
         fin_juego = victory_for(board, "O")
         if fin_juego == True:
@@ -251,4 +253,4 @@ display_board(board)
 if fin_juego == True:
     print("Fin del juego")
 else:
-    print("Empate")     
+    print("Empate")
