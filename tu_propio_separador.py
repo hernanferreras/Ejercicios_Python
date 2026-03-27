@@ -10,11 +10,33 @@ Tu tarea es escribir tu propia función, que se comporte casi como el método or
 Utiliza la plantilla en el editor. Prueba tu código con cuidado.
 '''
 
-def mysplit(strng):
-    #
-    # coloca tu código aquí
-    #
-
+def mysplit(a):
+    b = []
+    x = ''
+    solo_espacios = False
+    if len(a) == 0 or a[0] == chr(32):
+        if len(a) == 0:
+            return b
+        else:
+            for ch in a:
+                if ch == chr(32):
+                    solo_espacios = True
+                else:
+                    solo_espacios = False
+                    break
+        if solo_espacios == True:
+            return b
+    else:
+        for i in range(len(a)):
+            if (a[i]== chr(32))and solo_espacios == False:
+                print(i, "guarda palabra")
+                b.append(x)
+                x = ''
+            else:
+                print(i, "suma caracter")
+                x += a[i]
+    b.append(x)
+    return b
 
 print(mysplit("Ser o no ser, esa es la cuestión"))
 print(mysplit("Ser o no ser, esa es la cuestión"))
