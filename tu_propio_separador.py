@@ -9,6 +9,8 @@ Tu tarea es escribir tu propia función, que se comporte casi como el método or
 
 Utiliza la plantilla en el editor. Prueba tu código con cuidado.
 '''
+
+#NOTA: Se realiza sin utilizar ningun metodo de cadena
 def mysplit(a):
     b = []
     c = []
@@ -40,7 +42,6 @@ def mysplit(a):
 
 cadena = input("Ingrese una cadena: ")
 print(mysplit(cadena))
-print(mysplit("Ser o no ser, esa es la cuestión"))
 print(mysplit("Ser o no ser, esa es la cuestión"))
 print("Esta cadena es solo espacios: ", mysplit("   "))
 print("Esta cadena tiene espacio al final y principio: ", mysplit(" abc "))
