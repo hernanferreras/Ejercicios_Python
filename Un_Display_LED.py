@@ -14,3 +14,10 @@ Nota: el número 8 muestra todas las luces LED encendidas.
 Tu código debe mostrar cualquier número entero no negativo ingresado por el usuario.
 Consejo: puede ser muy útil usar una lista que contenga patrones de los diez dígitos.
 '''
+def led(a):
+    linea1 = ["  #","###", "###","# #","###","###","###","###","###","###"]
+    linea2 = ["  #","  #", "  #","# #","#  ","#  ","  #","# #","# #","# #"]
+    linea3 = ["  #","###", " ##","###","###","###","  #","###","###","# #"]
+    linea4 = ["  #","#  ", "  #","  #","  #","# #","  #","# #","  #","# #"]
+    linea5 = ["  #","### ","###","  #","###","###","  #","###","###","###"]
+
