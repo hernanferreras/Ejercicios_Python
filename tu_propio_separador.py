@@ -15,7 +15,7 @@ def mysplit(a):
     x = ""
     solo_espacios = False
     if len(a) == 0:
-        return b
+        return c
     else:
         for ch in a:
             if ch == chr(32):
