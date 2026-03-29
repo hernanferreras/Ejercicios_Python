@@ -15,8 +15,22 @@ Tu código debe mostrar cualquier número entero no negativo ingresado por el us
 Consejo: puede ser muy útil usar una lista que contenga patrones de los diez dígitos.
 '''
 def led(a):
-    linea1 = ["   #","####","####","#  #","####","####","####","####","####","####"]
-    linea2 = ["   #","   #","   #","#  #","#   ","#   ","   #","#  #","#  #","#  #"]
-    linea3 = ["   #","####","  ##","####","####","####","   #","####","####","#  #"]
-    linea4 = ["   #","#   ","   #","   #","   #","#  #","   #","#  #","   #","#  #"]
-    linea5 = ["   #","####","####","   #","####","####","   #","####","####","####"]
+    linea1 = ["####","  #","####", "####","#  #","####","####","####","####","####"]
+    linea2 = ["#  #","  #","   #", "   #","#  #","#   ","#   ","   #","#  #","#  #"]
+    linea3 = ["#  #","  #","####", "  ##","####","####","####","   #","####","####"]
+    linea4 = ["#  #","  #","#   ", "   #","   #","   #","#  #","   #","#  #","   #"]
+    linea5 = ["####","  #","#### ","####","   #","####","####","   #","####","####"]
+
+    for x in a:
+        x = int(x)
+        
+        print(linea1[x])
+        print(linea2[x])
+        print(linea3[x])
+        print(linea4[x])
+        print(linea5[x], sep=' ')
+    print(a)
+
+
+entrada = input("Ingrese un numero: ")
+led(entrada)
