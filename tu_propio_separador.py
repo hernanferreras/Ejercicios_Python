@@ -10,7 +10,7 @@ Tu tarea es escribir tu propia función, que se comporte casi como el método or
 Utiliza la plantilla en el editor. Prueba tu código con cuidado.
 '''
 
-def mysplit(a):
+def mysplit2(a):
     b = []
     x = ''
     solo_espacios = False
@@ -28,19 +28,18 @@ def mysplit(a):
             return b
     else:
         for i in range(len(a)):
-            if (a[i]== chr(32))and solo_espacios == False:
-                print(i, "guarda palabra")
+            if (a[i]== chr(32)):
                 b.append(x)
                 x = ''
             else:
-                print(i, "suma caracter")
                 x += a[i]
-    b.append(x)
+        b.append(x)
     return b
 
-print(mysplit("Ser o no ser, esa es la cuestión"))
-print(mysplit("Ser o no ser, esa es la cuestión"))
-print(mysplit("   "))
-print(mysplit(" abc "))
-print(mysplit(""))
-    
+cadena = input("Ingrese una cadena: ")
+print(mysplit2(cadena))
+print(mysplit2("Ser o no ser, esa es la cuestión"))
+print(mysplit2("Ser o no ser, esa es la cuestión"))
+print("Esta cadena es solo espacios: ", mysplit2("   "))
+print("Esta cadena tiene espacio al final y principio: ", mysplit2(" abc "))
+print("Esta cadena esta vacia: ", mysplit2(""))
