@@ -12,7 +12,8 @@ Utiliza la plantilla en el editor. Prueba tu código con cuidado.
 
 def mysplit2(a):
     b = []
-    x = ''
+    c = []
+    x = ""
     solo_espacios = False
     if len(a) == 0 or a[0] == chr(32):
         if len(a) == 0:
@@ -30,11 +31,17 @@ def mysplit2(a):
         for i in range(len(a)):
             if (a[i]== chr(32)):
                 b.append(x)
-                x = ''
+                x = ""
             else:
                 x += a[i]
         b.append(x)
-    return b
+        for z in b:
+            print(z)    
+            if z != '':
+                c.append(z)
+    del b        
+    return c
+
 
 cadena = input("Ingrese una cadena: ")
 print(mysplit2(cadena))
