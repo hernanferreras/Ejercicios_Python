@@ -39,8 +39,3 @@ def led(a):
    
 numero = input("Ingrese un numero: ")
 led(numero)
-
-
-
-entrada = input("Ingrese un numero: ")
-led(entrada)
