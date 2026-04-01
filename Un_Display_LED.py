@@ -15,11 +15,7 @@ Tu código debe mostrar cualquier número entero no negativo ingresado por el us
 Consejo: puede ser muy útil usar una lista que contenga patrones de los diez dígitos.
 '''
 def led(a):
-    #linea1 = ["####","  # ","####", "####","#  #","####","####","####","####","####"]
-    #linea2 = ["#  #"," ## ","   #", "   #","#  #","#   ","#   ","   #","#  #","#  #"]
-    #linea3 = ["#  #","  # ","####", "  ##","####","####","####","   #","####","####"]
-    #linea4 = ["#  #","  # ","#   ", "   #","   #","   #","#  #","   #","#  #","   #"]
-    #linea5 = ["####","####","#### ","####","   #","####","####","   #","####","####"]
+    #Armado de numeros con "leds"
     num0 = ["####","#  #","#  #","#  #","####"]
     num1 = ["  # "," ## ","  # ","  # ","####"]
     num2 = ["####","   #","####","#   ","####"]
@@ -30,12 +26,21 @@ def led(a):
     num7 = ["####","   #","   #","   #","   #"]
     num8 = ["####","#  #","####","#  #","####"]
     num9 = ["####","#  #","####","   #","####"]
-    
-    dic = {"0": num0, "1":num1, "2":num2, "3":num3, "4":num4, "5":num5, "6":num6, "7":num7, "8":num8, "9":num9}
 
+    #diccionario perteneciente a que variable le corresponde cada numero
+    dic = {"0": num0, "1":num1, "2":num2, "3":num3, "4":num4, "5":num5, "6":num6, "7":num7, "8":num8, "9":num9}
+    
+    #Armado de la lista de numeros
+    word = []
     for ch in a:
-       for x in dic[ch]:
-           print(x)
-   
+        word.append(dic[ch])
+
+    #Imprime numero en pantalla
+    for i in range(5):     
+        for j in range(len(word)):
+            print(word[j][i], end='')
+        print("\n")
+          
 numero = input("Ingrese un numero: ")
 led(numero)
+
